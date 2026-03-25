@@ -1,9 +1,30 @@
+import { EjemploGuardar } from './js/data/EjemploGuardar.js';
+
+
 const btnBuscar = document.getElementById('btnBuscar');
+const btnGuardar = document.getElementById('btnGuardar');
+const btnLeer = document.getElementById('btnLeer');
 const inputNombrePokemon = document.getElementById('pokemonName');
 const sectionInfoPokemon = document.getElementById('infoPokemon');
 
 btnBuscar.addEventListener('click', () => {
     buscarPokemon(inputNombrePokemon.value.toLowerCase());
+});
+
+btnGuardar.addEventListener('click', () => {
+    const pokemones = [{ nombre: 'Pikachu', nivel: 10 }, { nombre: 'Charmander', nivel: 15 }];
+    EjemploGuardar.guardarPokemones(pokemones);
+    alert('Pokemones guardados');
+});
+
+btnLeer.addEventListener('click', () => {
+    const pokemones = EjemploGuardar.obtenerPokemones(); // Aqui tenemos JSON
+    alert(pokemones[0].nombre); // Pikachu
+    let datos_pokemones = '';
+    pokemones.forEach(p => {
+        datos_pokemones += `Nombre: ${p.nombre}, Nivel: ${p.nivel}\n`;
+    });
+    alert(datos_pokemones);
 });
 
 async function buscarPokemon(nombre) {
@@ -32,8 +53,7 @@ function mostrarInfoPokemon(datos) {
             <img src="${datos.sprites.other['official-artwork'].front_default}" alt="${datos.name}">
             <h2>${datos.name}</h2>
             <h2>Tipo: ${datos.types.map(tipo => tipo.type.name).join(', ')}</h2>
-            <h3>Atributos:</h3>
-            <h3>${datos.stats.map(stat => `${stat.stat.name}: ${stat.base_stat}`).join(', ')}</h3>
+            <h3>Atributos: \n ${datos.stats.map(stat => `${stat.stat.name}: ${stat.base_stat}`).join(', ')}</h3>
         </div>
     `
 } // Las funciones NO terminan en ;
