@@ -1,0 +1,106 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    transition: background-color 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-base, #f0f0f0);
+}
+
+#contenedor {
+    text-align: center;
+    background-color: white;
+    padding: 10rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 2);
+}
+
+#pokemonName {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: auto;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-base, #ccc);
+}
+
+#logoPokemon {
+    width: 20rem;
+    margin-bottom: 0px;
+    margin-top: 1rem;
+}
+
+main {
+    margin-top: 1rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 800px;
+    border: var(--color-base, #ccc);
+}
+
+#btnBuscar {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: auto;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--color-base, #ccc);
+}
+
+#infoPokemon {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2,
+h3 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+
+body[data-tipo="fire"] {
+    --color-base: #ff9b54ae;
+}
+
+body[data-tipo="water"] {
+    --color-base: #51a4e7ad;
+}
+
+body[data-tipo="electric"] {
+    --color-base: #fbd10089;
+}
+
+body[data-tipo="grass"] {
+    --color-base: #63bb5b9b;
+}
+
+body[data-tipo="psychic"] {
+    --color-base: #f7717a9e;
+}
+
+body[data-tipo="ice"] {
+    --color-base: #9bd8d8a6;
+}
+
+body[data-tipo="dragon"] {
+    --color-base: #ff3310a6;
+}
+
+body[data-tipo="dark"] {
+    --color-base: #707070a6;
+}
+
+body[data-tipo="fairy"] {
+    --color-base: #fdb9e9a6;
+}
+
+body[data-tipo="normal"] {
+    --color-base: #a8a878a6;
+}
