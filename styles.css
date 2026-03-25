@@ -51,6 +51,7 @@ button {
     cursor: pointer;
     font-weight: bold;
     background-color: var(--color-base, #0a3e72);
+    color: white;
 }
 
 #infoPokemon {
